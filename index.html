@@ -1,0 +1,340 @@
+<html>
+
+
+
+<script>
+function calculate(){
+
+rgrade = "";
+rbndry ="";
+ums =0;
+
+gcse = document.getElementById('GCSE').value;
+ums = document.getElementById('UMS').value;
+grade = document.getElementById('GRADE').value;
+
+if ( (grade == "as")||(grade == "a")||(grade == "b")|(grade == "c") ) {
+    rgrade = "GCSE resit not necessary";
+}
+
+
+
+
+
+if (gcse == "GEv1"){rbndry =	99;};
+if (gcse == "GEv2"){rbndry =	99;};
+if (gcse == "GEv3"){rbndry =	66;};
+if (gcse == "GEv4"){rbndry =	110;};
+if (gcse == "GEv5"){rbndry =	88;};
+if (gcse == "GEv6"){rbndry =	88;};
+if (gcse == "GEv7"){rbndry =	220;};
+if (gcse == "GEv8"){rbndry =	220;};
+if (gcse == "GEv9"){rbndry =	33;};
+if (gcse == "GEv10"){rbndry =	66;};
+if (gcse == "GEv11"){rbndry =	66;};
+if (gcse == "GEv12"){rbndry =	66;};
+if (gcse == "GEv13"){rbndry =	40;};
+if (gcse == "GEv14"){rbndry =	43;};
+if (gcse == "GEv15"){rbndry =	43;};
+if (gcse == "GEv16"){rbndry =	33;};
+if (gcse == "GEv17"){rbndry =	33;};
+if (gcse == "GEv18"){rbndry =	33;};
+if (gcse == "GEv19"){rbndry =	0;};
+if (gcse == "GEv20"){rbndry =	0;};
+
+if (gcse == "GMv1"){rbndry =	330};
+if (gcse == "GMv2"){rbndry =	165};
+if (gcse == "GMv3"){rbndry =	165};
+if (gcse == "GMv4"){rbndry =	114};
+if (gcse == "GMv5"){rbndry =	54};
+if (gcse == "GMv6"){rbndry =	110};
+if (gcse == "GMv7"){rbndry =	220};
+if (gcse == "GMv8"){rbndry =	220};
+if (gcse == "GMv9"){rbndry =	220};
+if (gcse == "GMv10"){rbndry =	130};
+if (gcse == "GMv11"){rbndry =	220};
+if (gcse == "GMv12"){rbndry =	110};
+if (gcse == "GMv13"){rbndry =	165};
+if (gcse == "GMv14"){rbndry =	165};
+if (gcse == "GMv15"){rbndry =	102};
+if (gcse == "GMv16"){rbndry =	121};
+
+
+
+
+
+
+
+if (grade == "d") {
+        if (ums >=rbndry){
+                rgrade = "GCSE";
+        }else {
+                rgrade = "Functional Skills Level 2";
+        }
+
+
+}
+
+
+
+
+
+
+if  (grade == "e") {
+    rgrade = "Functional Skills Level 1";
+}
+
+
+
+if  (grade == "f") {
+    rgrade = "Functional Skills Entry Level 3";
+}
+
+
+if  (grade == "g") {
+    rgrade = "Functional Skills Entry Level 2";
+}
+
+
+if  (grade == "fail") {
+    rgrade = "Functional Skills Entry Level 2";
+}
+
+
+document.getElementById('TARO').value = rgrade;
+document.getElementById('TARO1').value = rbndry;
+
+document.getElementById('bnd1').value = rbndry;
+document.getElementById('bnd2').value = rbndry;
+
+
+
+
+
+}
+
+
+</script>
+
+    
+
+
+
+
+
+
+
+<body bgcolor=#BDBDBD>
+
+
+
+
+
+
+<table>
+
+<Tr>
+
+<td width=10% align=left>
+<img src='collegelogo.gif'>
+</td>
+
+<td width=80% align=center>
+<div align=center
+style ="
+   padding: 5px;
+   font-size: 40px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   ">
+
+GCSE Resit Calculator ver 1.0 <br>
+</div>
+
+</td>
+
+<td width=10% align=left>
+<img src='pm.gif'>
+</td>
+
+</tr>
+
+</table>
+
+
+
+<hr>
+
+<BR>
+
+<div align=center>
+
+<select id="GCSE"
+style ="
+   padding: 5px;
+   font-size: 48px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   " onchange="calculate()">
+	<option value="GEv1">GCSE English AQA - ENG1F</option>
+  	<option value="GEv2">GCSE English AQA - ENG1H</option>
+	<option value="GEv3">GCSE English AQA - ENL03</option>
+	<option value="GEv4">IGCSE English AQA - 8705/1</option>
+	<option value="GEv5">IGCSE English AQA - 8705/2</option>
+	<option value="GEv6">IGCSE English AQA - 8705/CP</option>
+	<option value="GEv7">IGCSE English AQA - 8705F/H C</option>
+	<option value="GEv8">IGCSE English AQA - 8705F/H W</option>
+	<option value="GEv9">GCSE English EDEXCEL - 5EH01</option>
+	<option value="GEv10">GCSE English EDEXCEL - 5EN2F</option>
+	<option value="GEv11">GCSE English EDEXCEL - 5EN2H</option>
+	<option value="GEv12">GCSE English EDEXCEL - 5EN03</option>
+	<option value="GEv13">IGCSE English EDEXCEL - Route 1</option>
+	<option value="GEv14">IGCSE English EDEXCEL - Route 2</option>
+	<option value="GEv15">IGCSE English EDEXCEL - Route 3</option>
+	<option value="GEv16">GCSE English WJEC - Unit 1</option>
+	<option value="GEv17">GCSE English WJEC - Unit 1</option>
+	<option value="GEv18">GCSE English WJEC - Unit 2</option>
+	<option value="GEv19">GCSE English OCR </option>
+	<option value="GEv20">IGCSE English OCR</option>
+
+
+	<option value="GMv1">GCSE Maths AQA - 4307</option>
+	<option value="GMv2">GCSE Maths AQA - 4362</option>
+	<option value="GMv3">GCSE Maths AQA - 9307</option>
+	<option value="GMv4">GCSE Maths AQA - 4365</option>
+	<option value="GMv5">GCSE Maths AQA - 4365</option>
+	<option value="GMv6">GCSE Maths AQA - 9367</option>
+	<option value="GMv7">GCSE Maths EDEXCEL - 2AM01</option>
+	<option value="GMv8">GCSE Maths EDEXCEL - 2MB01</option>
+	<option value="GMv9">GCSE Maths EDEXCEL - 2MM01</option>
+	<option value="GMv10">GCSE Maths EDEXCEL - 1MA0</option>
+	<option value="GMv11">GCSE Maths OCR - J562</option>
+	<option value="GMv12">GCSE Maths OCR - J567</option>
+	<option value="GMv13">GCSE Maths OCR - J925</option>
+	<option value="GMv14">GCSE Maths OCR - J926</option>
+	<option value="GMv15">GCSE Maths WJEC - 4370</option>
+	<option value="GMv16">GCSE Maths CCEA - GMT51</option>
+
+
+</select>
+
+
+<BR>
+
+
+<select id="GRADE" style ="
+   padding: 5px;
+   font-size: 48px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   " onchange="calculate()">
+  <option value="as">A*</option>
+  <option value="a">A</option>
+  <option value="b">B</option>
+  <option value="c">C</option>
+  <option value="d" selected>D</option>
+  <option value="e">E</option>
+  <option value="f">F</option>
+  <option value="g">G</option>
+  <option value="fail">Fail</option>
+</select>
+
+
+<input type="text"  value="" id="UMS" placeholder="UMS"
+style ="
+font-size: 48px; 
+width: 5em;
+text-align: center; "
+onchange="calculate()"
+>
+
+<BR>
+
+</div>
+
+
+
+
+<BR>
+
+
+
+
+<HR>
+
+
+<div align=center
+style ="
+   padding: 5px;
+   font-size: 20px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   ">
+
+
+
+
+<table>
+
+
+
+
+<tr valign=top align=center>
+
+<td>
+
+The learner should be enrolled on<br>
+
+
+<input type="text"  value="" id="TARO" placeholder="Results"
+style ="
+font-size: 20px; 
+width: 15em;
+text-align: center; 
+" readonly>
+
+
+<br>
+
+The boundry for resiting GCSE is:<br>
+
+<input type="text"  value="" id="TARO1" placeholder="Results"
+style ="
+font-size: 20px; 
+width: 15em;
+text-align: center; 
+" readonly>
+
+
+
+
+</td>
+
+<td>
+
+
+<table >
+<tr> <td>Grade A*,A,B,C</td>            	        <td>Not Necessary</td>    </tr>
+<tr>   <td>Grade D at or above UMS 	<input type="text"  value="" id="bnd1" readonly style ="width: 3em;">	</td>   <td>GCSE</td> </tr>
+<tr>   <td>Grade D below UMS 		<input type="text"  value="" id="bnd2" readonly style ="width: 3em;"></td>               		<td>Functional Skills Level 2</td> </tr>
+<tr>   <td>Grade E</td>                        		<td>Functional Skills Level 1</td> </tr>
+<tr>   <td>Grade F</td>                        		<td>Functional Skills Entry Level 3</td> </tr>
+<tr>   <td>Grade G</td>                        		<td>Functional SKills Entry Level 2</td> </tr>
+</table>   
+
+
+
+</tD>
+
+</tr>
+
+</table>
+
+</DIV>
+
+
+</body>
